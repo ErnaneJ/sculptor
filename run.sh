@@ -1,7 +1,6 @@
 declare -a files=(`ls -d -1 ./**/*.cpp`)
 
 echo "🟢 Running: g++ ./main.cpp ${files[*]} -o ./main && ./main"
-echo 
 
 `g++ $PWD/main.cpp ${files[*]} -o $PWD/main && $PWD/main`
 
