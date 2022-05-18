@@ -105,11 +105,11 @@ void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
       for(int k = 0; k < nz; k++){
         current_voxel = &v[i][j][k];
         if(check_coordinates_for_a_sphere((i-xcenter), (j-ycenter), (k-zcenter), (radius/2.0))){
-            current_voxel -> r = r;
-            current_voxel -> b = b;
-            current_voxel -> g = g;
-            current_voxel -> a = a;
-            current_voxel -> isOn = true;
+          current_voxel -> r = r;
+          current_voxel -> b = b;
+          current_voxel -> g = g;
+          current_voxel -> a = a;
+          current_voxel -> isOn = true;
         }
       }
     }
@@ -124,7 +124,7 @@ void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
       for(int k = 0; k < nz; k++){
         current_voxel = &v[i][j][k];
         if(check_coordinates_for_a_sphere((i-xcenter), (j-ycenter), (k-zcenter), (radius/2.0))){
-            current_voxel -> isOn = false;
+          current_voxel -> isOn = false;
         }
       }
     }
@@ -135,10 +135,10 @@ bool Sculptor::check_coordinates_for_a_ellipsoid(
   int variation_of_x, int variation_of_y, int variation_of_z, 
   float radius_x, float radius_y, float radius_z){
   
-  float distanc = (variation_of_x/2.0) * (variation_of_x/2.0) / (radius_x*radius_x) +
-               (variation_of_y/2.0) * (variation_of_y/2.0) / (radius_y*radius_y) +
-               (variation_of_z/2.0) * (variation_of_z/2.0) / (radius_z*radius_z);
-  return (distanc <= 1);
+  float distance = (variation_of_x/2.0) * (variation_of_x/2.0) / (radius_x*radius_x) +
+                  (variation_of_y/2.0) * (variation_of_y/2.0) / (radius_y*radius_y) +
+                  (variation_of_z/2.0) * (variation_of_z/2.0) / (radius_z*radius_z);
+  return (distance <= 1);
 }
 
 void Sculptor::validates_ellipsoid_parameters(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
@@ -163,11 +163,11 @@ void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
       for(int k = 0; k < nz; k++){
         bool coordinates_respect_equation = check_coordinates_for_a_ellipsoid((i-xcenter), (j-ycenter), (k-zcenter), (rx/2.0), (ry/2.0), (rz/2.0));
         if(coordinates_respect_equation){
-            v[i][j][k].isOn=true;
-            v[i][j][k].r=r;
-            v[i][j][k].b=b;
-            v[i][j][k].g=g;
-            v[i][j][k].a=a;
+          v[i][j][k].isOn=true;
+          v[i][j][k].r=r;
+          v[i][j][k].b=b;
+          v[i][j][k].g=g;
+          v[i][j][k].a=a;
         }
       }
     }
@@ -181,7 +181,7 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
       for(int k = 0; k < nz; k++){
         bool coordinates_respect_equation = check_coordinates_for_a_ellipsoid((i-xcenter), (j-ycenter), (k-zcenter), (rx/2.0), (ry/2.0), (rz/2.0));
         if(coordinates_respect_equation){
-            v[i][j][k].isOn=false;
+          v[i][j][k].isOn=false;
         }
       }
     }
@@ -189,16 +189,16 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
 }
 
 void Sculptor::writeOFF(const char* filename){
-  fout.open(filename);
+  output_file.open(filename);
   
-  if(fout.is_open()){
+  if(output_file.is_open()){
     fill_file_with_voxel_data();
   }else{
     std::cout << "[Error - WriteOFF] Ocorreu um erro na leitura/gravação do arquivo ("<< filename << ")."<< std::endl;
     exit(1);
   }
   
-  fout.close();
+  output_file.close();
 }
 
 // ----------| Private Methods;
@@ -234,7 +234,7 @@ void Sculptor::insert_voxel_vertices(){
     for(int k = 0; k < nx; k++){
       current_voxel = &v[i][j][k];
       if(current_voxel -> isOn){
-        fout << i - 0.5 << " " << j + 0.5 << " " << k - 0.5 << std::endl
+        output_file << i - 0.5 << " " << j + 0.5 << " " << k - 0.5 << std::endl
              << i - 0.5 << " " << j - 0.5 << " " << k - 0.5 << std::endl
              << i + 0.5 << " " << j - 0.5 << " " << k - 0.5 << std::endl
              << i + 0.5 << " " << j + 0.5 << " " << k - 0.5 << std::endl
@@ -255,7 +255,7 @@ void Sculptor::insert_voxel_faces(){
       for(int k=0; k<nz; k++){
         current_voxel = &v[i][j][k];
         if(current_voxel -> isOn){
-          fout << 4 << " " << 0 + current_face << " " << 3 + current_face << " " << 2 + current_face << " " << 1 + current_face << " "
+          output_file << 4 << " " << 0 + current_face << " " << 3 + current_face << " " << 2 + current_face << " " << 1 + current_face << " "
                << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
                << 4 << " " << 4 + current_face << " " << 5 + current_face << " " << 6 + current_face << " " << 7 + current_face<< " "
                << current_voxel -> r << " " << current_voxel -> g << " " << current_voxel -> b << " " << current_voxel -> a << std::endl
@@ -278,8 +278,8 @@ void Sculptor::fill_file_with_voxel_data(){
   int number_of_vertices = 8*number_of_voxels_to_show();
   int number_of_edges = 6*number_of_voxels_to_show();
   
-  fout << "OFF" << std::endl;
-  fout << number_of_vertices << " " 
+  output_file << "OFF" << std::endl;
+  output_file << number_of_vertices << " " 
        << number_of_edges << " " 
        << 0 << " " << std::endl;
 

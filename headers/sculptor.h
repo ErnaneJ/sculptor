@@ -8,7 +8,7 @@
 
   class Sculptor {
     protected:
-      std::ofstream fout;
+      std::ofstream output_file;
       Voxel ***v; // 3D matrix
       int nx,ny,nz; // Dimensions
       float r,g,b,a; // Current drawing color
