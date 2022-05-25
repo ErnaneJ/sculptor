@@ -2,10 +2,9 @@
    Sculptor
 </h1>
 
-<p align="center">
-  <img title="BMO - model example" alt="BMO - model example" src="./assets/bmo.gif" width="46%">
-  <img title="BMO - model example" alt="Coin - model example" src="./assets/coin.gif" width="45%">
-</p>
+| BMO - Example Model | Coin - Example Model | 
+| :---: | :---: |
+| <img title="BMO - example model" align="right" alt="BMO - example model" src="./assets/bmo.gif" width="100%"> | <img title="BMO - example model" align="center" alt="Coin - example model" src="./assets/coin.gif" width="94%"> |
 
 
 ## 💻 Sobre
