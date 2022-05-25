@@ -1,4 +1,4 @@
-declare -a files=(`ls -d -1 ./**/*.cpp`)
+declare -a files=(`ls -d -1 ./sources/*.cpp`)
 
 echo "🟢 Running: g++ ./main.cpp ${files[*]} -o ./main && ./main"
 
