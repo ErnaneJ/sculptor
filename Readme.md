@@ -11,6 +11,8 @@
 
 Tool in C++ to make sculptures in blocks represented by digital matrices. It allows the user to be able to create a plain text file that contains a sequence of steps to be followed to define properties of a three-dimensional matrix. The properties contain specifications for coordinates in the three-dimensional plane and color, with added transparency, for the elements. The built model can be visualized with the help of visualization software such as [GeomView](http://www.geomview.org/).
 
+## Docs
+Acesse aqui a documentação para utilização da classe [Sculptor](...).
 
 ## ⚙️ Running
 
