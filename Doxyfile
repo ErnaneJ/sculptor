@@ -1,0 +1,30 @@
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "Sculptor"
+PROJECT_NUMBER         = "v1.0.0"
+OUTPUT_DIRECTORY       = ./docs/
+HTML_OUTPUT            = ./
+OUTPUT_LANGUAGE        = English
+GENERATE_LATEX         = NO
+BUILTIN_STL_SUPPORT    = YES
+INPUT                  = ./headers ./sources
+RECURSIVE              = YES
+HIDE_UNDOC_RELATIONS   = NO
+HAVE_DOT               = YES
+UML_LOOK               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+
+HAVE_DOT               = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+DISABLE_INDEX          = YES 
+GENERATE_TREEVIEW      = YES
+RECURSIVE              = YES
+HAVE_DOT               = YES
+COLLABORATION_GRAPH    = NO
+HIDE_UNDOC_RELATIONS   = NO
+
+EXAMPLE_PATH = ./examples/docs/
