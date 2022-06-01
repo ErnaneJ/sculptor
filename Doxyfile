@@ -6,25 +6,21 @@ HTML_OUTPUT            = ./
 OUTPUT_LANGUAGE        = English
 GENERATE_LATEX         = NO
 BUILTIN_STL_SUPPORT    = YES
-INPUT                  = ./headers ./sources
+DOCSET_PUBLISHER_NAME  = Ernane Ferreira
+USE_MDFILE_AS_MAINPAGE = ./doxygen-extra/main.md
+INPUT                  = ./doxygen-extra/main.md ./headers ./sources
 RECURSIVE              = YES
-HIDE_UNDOC_RELATIONS   = NO
-HAVE_DOT               = YES
-UML_LOOK               = YES
-CALL_GRAPH             = YES
-CALLER_GRAPH           = YES
-
-HAVE_DOT               = YES
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
 EXTRACT_STATIC         = YES
-CALL_GRAPH             = NO
-CALLER_GRAPH           = NO
-DISABLE_INDEX          = YES 
 GENERATE_TREEVIEW      = YES
 RECURSIVE              = YES
 HAVE_DOT               = YES
 COLLABORATION_GRAPH    = NO
 HIDE_UNDOC_RELATIONS   = NO
-
-EXAMPLE_PATH = ./examples/docs/
+HIDE_UNDOC_RELATIONS   = NO
+HTML_EXTRA_STYLESHEET  = doxygen-awesome-css/doxygen-awesome.css \
+                         doxygen-awesome-css/doxygen-awesome-sidebar-only.css \
+												 doxygen-awesome-css/doxygen-awesome-sidebar-only-darkmode-toggle.css
+HTML_EXTRA_FILES       = doxygen-awesome-css/doxygen-awesome-darkmode-toggle.js
+HTML_HEADER            = ./doxygen-extra/header.html
