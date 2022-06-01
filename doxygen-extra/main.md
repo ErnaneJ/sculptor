@@ -1,19 +1,17 @@
-<h1 align="center">
-   Sculptor
-</h1>
+# Sculptor
 
 | BMO - Example Model | Coin - Example Model | 
 | :---: | :---: |
 | <img style="filter: none !important;" title="BMO - example model" align="right" alt="BMO - example model" src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/bmo.gif" width="100%"> | <img style="filter: none !important;" title="Coin - example model" align="center" alt="Coin - example model" src="https://raw.githubusercontent.com/ErnaneJ/sculptor/master/assets/coin.gif" width="100%"> |
 
-## 💻 About
+# About
 
 Tool in C++ to make sculptures in blocks represented by digital matrices. It allows the user to be able to create a plain text file that contains a sequence of steps to be followed to define properties of a three-dimensional matrix. The properties contain specifications for coordinates in the three-dimensional plane and color, with added transparency, for the elements. The built model can be visualized with the help of visualization software such as [GeomView](http://www.geomview.org/).
 
-## 📑 Docs
+#  Docs
 Access the documentation for using the Sculptor class [here](https://ernanej.github.io/sculptor/).
 
-## ⚙️ Running
+# Running
 
 ```bash
   $ chmod +x ./run.sh && ./run.sh
