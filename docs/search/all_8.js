@@ -1,4 +1,8 @@
 var searchData=
 [
-  ['r_16',['r',['../classSculptor.html#a3f5d2ec3b66d645019b8d81c810a1cd8',1,'Sculptor::r()'],['../structVoxel.html#a06872ec79b836120b551a848968c0f1b',1,'Voxel::r()']]]
+  ['sculptor_18',['Sculptor',['../classSculptor.html',1,'Sculptor'],['../classSculptor.html#a014e3ef5517bf0e9d9e14486b6ac6433',1,'Sculptor::Sculptor()']]],
+  ['sculptor_19',['SCULPTOR',['../sculptor_8h.html#adb6e05139c58b4757504ab683eb9813d',1,'sculptor.h']]],
+  ['sculptor_2ecpp_20',['sculptor.cpp',['../sculptor_8cpp.html',1,'']]],
+  ['sculptor_2eh_21',['sculptor.h',['../sculptor_8h.html',1,'']]],
+  ['setcolor_22',['setColor',['../classSculptor.html#af1d69da01379874b0dfd6454787cb562',1,'Sculptor']]]
 ];

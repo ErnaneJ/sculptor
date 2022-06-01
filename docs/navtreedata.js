@@ -25,9 +25,7 @@
 var NAVTREE =
 [
   [ "Sculptor", "index.html", [
-    [ "About", "index.html#autotoc_md0", null ],
-    [ "Docs", "index.html#autotoc_md1", null ],
-    [ "Running", "index.html#autotoc_md2", null ],
+    [ "Readme", "md_Readme.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
