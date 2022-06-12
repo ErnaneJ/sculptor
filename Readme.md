@@ -20,7 +20,7 @@ Access the documentation for using the Sculptor class [here](https://ernanej.git
   contain the following instructions.
 - The file will contain several of these lines, each one containing an instruction orienting the type of drawing to be carried out in the sequence. At the end, the program will read this file and create an output file in `OFF` format containing the design conceptualized in the provided file.
 
-| Código | Função|
+| Code | What it does|
 |:-------|:------|
 | `dim largura altura profundidade`| Defines the dimensions of the sculpture. <br/><br/> Ex.: `dim 60 40 55`|
 | `putvoxel x y z r g b a` | Draw a voxel at position (`x`,`y`,`z`) with color `r`,`g`,`b` and `a`. <br/><br/> Ex.: `putvoxel 5 5 10 1.0 0.8 0.4 0.3`|
