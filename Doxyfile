@@ -1,6 +1,7 @@
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "Sculptor"
-PROJECT_NUMBER         = "v1.0.0"
+PROJECT_LOGO           = "./assets/bmoNbg.png"
+PROJECT_NUMBER         = "v2.0.0"
 OUTPUT_DIRECTORY       = ./docs/
 HTML_OUTPUT            = ./
 OUTPUT_LANGUAGE        = English

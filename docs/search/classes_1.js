@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voxel_28',['Voxel',['../structVoxel.html',1,'']]]
+  ['figurageometrica_89',['FiguraGeometrica',['../classFiguraGeometrica.html',1,'']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['cutbox_33',['cutBox',['../classSculptor.html#aa84a1b12b09e9e103fc8d78f8d1bc00f',1,'Sculptor']]],
-  ['cutellipsoid_34',['cutEllipsoid',['../classSculptor.html#a18d2922c111c4c13653ee07d878151ad',1,'Sculptor']]],
-  ['cutsphere_35',['cutSphere',['../classSculptor.html#a67ab8c0ba5116adb8af1d01ad373ac15',1,'Sculptor']]],
-  ['cutvoxel_36',['cutVoxel',['../classSculptor.html#ad9d714a35fc8ae16d06eb5df37c3493c',1,'Sculptor']]]
+  ['cutbox_121',['CutBox',['../classCutBox.html#afc1a4c727ae2d626b9ef505bb5ea17bb',1,'CutBox']]],
+  ['cutellipsoid_122',['CutEllipsoid',['../classCutEllipsoid.html#a1b1471ec85388f1dc55c286bd9f03fd0',1,'CutEllipsoid']]],
+  ['cutsphere_123',['CutSphere',['../classCutSphere.html#a4a988fadbf16b6f99e34b860234913db',1,'CutSphere']]],
+  ['cutvoxel_124',['cutVoxel',['../classSculptor.html#ad9d714a35fc8ae16d06eb5df37c3493c',1,'Sculptor']]],
+  ['cutvoxel_125',['CutVoxel',['../classCutVoxel.html#afac12691226479b8cb41e329f2d5eae6',1,'CutVoxel']]]
 ];

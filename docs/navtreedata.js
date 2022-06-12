@@ -27,10 +27,12 @@ var NAVTREE =
   [ "Sculptor", "index.html", [
     [ "About", "index.html#autotoc_md1", null ],
     [ "Docs", "index.html#autotoc_md2", null ],
-    [ "Running", "index.html#autotoc_md3", null ],
+    [ "Conceptualization files", "index.html#autotoc_md3", null ],
+    [ "Running", "index.html#autotoc_md4", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
@@ -38,11 +40,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];

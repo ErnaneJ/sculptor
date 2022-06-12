@@ -26,7 +26,7 @@
       //! Construtor da classe.
       /*!
         Este construtor receberá os parâmetros dimensionais da matriz de voxels e 
-        construirá uma instancia da classe Sculptor.
+        construirá uma instância da classe Sculptor.
 
         @param _x Dimensionador digital inteiro da matriz de voxels no eixo X;
         @param _y Dimensionador digital inteiro da matriz de voxels no eixo Y;
@@ -85,98 +85,6 @@
         @return ***void***;
       */
       void cutVoxel(int x, int y, int z);
-
-      //! Função membro putBox.
-      /*!
-        Esse método irá informar para o sistema que todos os voxels, presentes em uma determinada região cúbica 
-        e pertencente ao espaço da matriz tridimensional de voxels, deverá ser **mostrado**.
-
-        @param x0 Representa uma coordenada no eixo **x** que denota o inicio do intervalo de voxels;
-        @param x1 Representa uma coordenada no eixo **x** que denota o término do intervalo de voxels;
-        @param y0 Representa uma coordenada no eixo **y** que denota o inicio do intervalo de voxels;
-        @param y1 Representa uma coordenada no eixo **y** que denota o término do intervalo de voxels;
-        @param z0 Representa uma coordenada no eixo **z** que denota o inicio do intervalo de voxels;
-        @param z1 Representa uma coordenada no eixo **z** que denota o término do intervalo de voxels;
-
-        @return ***void***;
-      */
-      void putBox(int x0, int x1, int y0, int y1, int z0, int z1);
-
-      //! Função membro cutBox.
-      /*!
-        Esse método irá informar para o sistema que todos os voxels, presentes em uma determinada região cúbica 
-        e pertencente ao espaço da matriz tridimensional de voxels, deverá ser **apagado**.
-
-        @param x0 Representa uma coordenada no eixo **x** que denota o inicio do intervalo de voxels;
-        @param x1 Representa uma coordenada no eixo **x** que denota o término do intervalo de voxels;
-        @param y0 Representa uma coordenada no eixo **y** que denota o inicio do intervalo de voxels;
-        @param y1 Representa uma coordenada no eixo **y** que denota o término do intervalo de voxels;
-        @param z0 Representa uma coordenada no eixo **z** que denota o inicio do intervalo de voxels;
-        @param z1 Representa uma coordenada no eixo **z** que denota o término do intervalo de voxels;
-
-        @return ***void***;
-      */
-      void cutBox(int x0, int x1, int y0, int y1, int z0, int z1);
-
-      //! Função membro putSphere.
-      /*!
-        Esse método irá informar para o sistema que todos os voxels, presentes em uma determinada região esférica 
-        e pertencente ao espaço da matriz tridimensional de voxels, deverá ser **mostrado**.
-
-        @param xcenter Representa uma coordenada no eixo **x** que denota o centro, naquele eixo, da esfera a ser mostrada;
-        @param ycenter Representa uma coordenada no eixo **y** que denota o centro, naquele eixo, da esfera a ser mostrada;
-        @param zcenter Representa uma coordenada no eixo **z** que denota o centro, naquele eixo, da esfera a ser mostrada;
-        @param radius  Representa o tamanho do **raio** da esfera, nas direções de **x**, **y** e **z**, que será mostrada;
-
-        @return ***void***;
-      */
-      void putSphere(int xcenter, int ycenter, int zcenter, int radius);
-
-      //! Função membro cutSphere.
-      /*!
-        Esse método irá informar para o sistema que todos os voxels, presentes em uma determinada região esférica 
-        e pertencente ao espaço da matriz tridimensional de voxels, deverá ser **apagado**.
-
-        @param xcenter Representa uma coordenada no eixo **x** que denota o centro, naquele eixo, da esfera a ser apagada;
-        @param ycenter Representa uma coordenada no eixo **y** que denota o centro, naquele eixo, da esfera a ser apagada;
-        @param zcenter Representa uma coordenada no eixo **z** que denota o centro, naquele eixo, da esfera a ser apagada;
-        @param radius  Representa o tamanho do **raio** da esfera, nas direções de **x**, **y** e **z**, que será apagada;
-
-        @return ***void***;
-      */
-      void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
-
-      //! Função membro putEllipsoid.
-      /*!
-        Esse método irá informar para o sistema que todos os voxels, presentes em uma determinada região formada por uma elipsoide 
-        e pertencente ao espaço da matriz tridimensional de voxels, deverá ser **mostrado**.
-
-        @param xcenter Representa uma coordenada no eixo **x** que denota o centro, naquele eixo, do elipsoide a ser mostrado;
-        @param ycenter Representa uma coordenada no eixo **y** que denota o centro, naquele eixo, do elipsoide a ser mostrado;
-        @param zcenter Representa uma coordenada no eixo **z** que denota o centro, naquele eixo, do elipsoide a ser mostrado;
-        @param rx  Representa o tamanho do **raio** do elipsoide na direção do eixo **x**;
-        @param ry  Representa o tamanho do **raio** do elipsoide na direção do eixo **y**;
-        @param rz  Representa o tamanho do **raio** do elipsoide na direção do eixo **z**;
-
-        @return ***void***;
-      */
-      void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-
-      //! Função membro cutEllipsoid.
-      /*!
-        Esse método irá informar para o sistema que todos os voxels, presentes em uma determinada região formada por uma elipsoide 
-        e pertencente ao espaço da matriz tridimensional de voxels, deverá ser **apagado**.
-
-        @param xcenter Representa uma coordenada no eixo **x** que denota o centro, naquele eixo, do elipsoide a ser apagado;
-        @param ycenter Representa uma coordenada no eixo **y** que denota o centro, naquele eixo, do elipsoide a ser apagado;
-        @param zcenter Representa uma coordenada no eixo **z** que denota o centro, naquele eixo, do elipsoide a ser apagado;
-        @param rx  Representa o tamanho do **raio** do elipsoide na direção do eixo **x**;
-        @param ry  Representa o tamanho do **raio** do elipsoide na direção do eixo **y**;
-        @param rz  Representa o tamanho do **raio** do elipsoide na direção do eixo **z**;
-
-        @return ***void***;
-      */
-      void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
 
       //! Função membro writeOFF.
       /*!
