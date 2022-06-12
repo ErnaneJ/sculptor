@@ -134,12 +134,11 @@ void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int r
     }
   }
 }
-
+#include <typeinfo>
 void Sculptor::writeOFF(const char* filename){
   Voxel *current_voxel;
   std::ofstream output_file;
   output_file.open(filename);
-  
   if(!output_file.is_open()){
     std::cout << "[Error] Ocorreu um erro na leitura/gravação do arquivo ("<< filename << ")."<< std::endl;
     exit(1);
@@ -149,11 +148,14 @@ void Sculptor::writeOFF(const char* filename){
   for(int i = 0; i < nx; i++){
     for(int j = 0; j < ny; j++){
       for(int k = 0; k < nz; k++){
+        // std::cout << i << " " << j << " " << k << std::endl;
+
         current_voxel = &v[i][j][k];
         if(current_voxel -> isOn) counter++;
       }
     }
   }
+
 
   int number_of_vertices = 8*counter;
   int number_of_edges = 6*counter;

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['nx_49',['nx',['../classSculptor.html#ad1e32f9042538419a3bc7b376f7813b8',1,'Sculptor']]],
-  ['ny_50',['ny',['../classSculptor.html#a1ce2ff97ec94927928ab3f5ec4ba6761',1,'Sculptor']]],
-  ['nz_51',['nz',['../classSculptor.html#a33204e7df26a7ee4c7192381a24335d3',1,'Sculptor']]]
+  ['ison_156',['isOn',['../structVoxel.html#a6fbe8bd53f64685ac4210726d40fc775',1,'Voxel']]]
 ];

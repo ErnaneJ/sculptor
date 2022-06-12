@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['nx_9',['nx',['../classSculptor.html#ad1e32f9042538419a3bc7b376f7813b8',1,'Sculptor']]],
-  ['ny_10',['ny',['../classSculptor.html#a1ce2ff97ec94927928ab3f5ec4ba6761',1,'Sculptor']]],
-  ['nz_11',['nz',['../classSculptor.html#a33204e7df26a7ee4c7192381a24335d3',1,'Sculptor']]]
+  ['interpreter_27',['Interpreter',['../classInterpreter.html',1,'Interpreter'],['../classInterpreter.html#a9faf0dca72cd27223e5c447b580de2a5',1,'Interpreter::Interpreter()']]],
+  ['interpreter_2ecpp_28',['interpreter.cpp',['../interpreter_8cpp.html',1,'']]],
+  ['interpreter_2eh_29',['interpreter.h',['../interpreter_8h.html',1,'']]],
+  ['ison_30',['isOn',['../structVoxel.html#a6fbe8bd53f64685ac4210726d40fc775',1,'Voxel']]]
 ];
