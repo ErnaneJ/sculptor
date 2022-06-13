@@ -30,7 +30,6 @@ Sculptor::~Sculptor(){
   delete[] v;
 }
 
-// ----------| Public Methos;
 void Sculptor::setColor(float r_, float g_, float b_, float alpha_){
   r = r_;
   g = g_;
@@ -54,87 +53,6 @@ void Sculptor::cutVoxel(int x, int y, int z){
   v[x][y][z].isOn = false;
 }
 
-void Sculptor::putBox(int xi, int xf, int yi, int yf, int zi, int zf){
-  for(int i = xi; i < xf; i++){
-    for(int j = yi; j < yf; j++){
-      for(int k = zi; k < zf; k++){
-        this -> putVoxel(i, j, k);
-      }
-    }
-  }
-}
-void Sculptor::cutBox(int xi, int xf, int yi, int yf, int zi, int zf){
-  for(int i = xi; i < xf; i++){
-    for(int j = yi; j < yf; j++){
-      for(int k = zi; k < zf; k++){
-        this -> cutVoxel(i, j, k);
-      }
-    }
-  }
-}
-
-void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius){
-  for(int i = 0; i < nx; i++){
-    for(int j = 0; j < ny; j++){
-      for(int k = 0; k < nz; k++){
-        float distance = ((i-xcenter)/2.0) * ((i-xcenter)/2.0 ) / ((radius/2.0)*(radius/2.0)) +
-                         ((j-ycenter)/2.0) * ((j-ycenter)/2.0) / ((radius/2.0)*(radius/2.0)) +
-                         ((k-zcenter)/2.0) * ((k-zcenter)/2.0 ) / ((radius/2.0)*(radius/2.0));
-        if( distance <= 1.0){
-          this -> putVoxel(i, j, k);
-        }
-      }
-    }
-  }
-}
-
-void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius){
-  for(int i = 0; i < nx; i++){
-    for(int j = 0; j < ny; j++){
-      for(int k = 0; k < nz; k++){
-        float distance = ((i-xcenter)/2.0) * ((i-xcenter)/2.0 ) / ((radius/2.0)*(radius/2.0)) +
-                         ((j-ycenter)/2.0) * ((j-ycenter)/2.0) / ((radius/2.0)*(radius/2.0)) +
-                         ((k-zcenter)/2.0) * ((k-zcenter)/2.0 ) / ((radius/2.0)*(radius/2.0));
-        if( distance <= 1.0){
-          this -> cutVoxel(i, j, k);
-        }
-      }
-    }
-  }
-}
-
-void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
-  for(int i = 0; i < nx; i++){
-    for(int j = 0; j < ny; j++){
-      for(int k = 0; k < nz; k++){
-        float distance = ((i-xcenter)/2.0) * ((i-xcenter)/2.0) / ((rx/2.0)*(rx/2.0)) +
-                         ((j-ycenter)/2.0) * ((j-ycenter)/2.0) / ((ry/2.0)*(ry/2.0)) +
-                         ((k-zcenter)/2.0) * ((k-zcenter)/2.0) / ((rz/2.0)*(rz/2.0));
-
-        if((distance <= 1)){
-          this -> putVoxel(i, j, k);
-        }
-      }
-    }
-  }
-}
-
-void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz){
-  for(int i = 0; i < nx; i++){
-    for(int j = 0; j < ny; j++){
-      for(int k = 0; k < nz; k++){        
-        float distance = ((i-xcenter)/2.0) * ((i-xcenter)/2.0) / ((rx/2.0)*(rx/2.0)) +
-                         ((j-ycenter)/2.0) * ((j-ycenter)/2.0) / ((ry/2.0)*(ry/2.0)) +
-                         ((k-zcenter)/2.0) * ((k-zcenter)/2.0) / ((rz/2.0)*(rz/2.0));
-      
-        if((distance <= 1)){
-          this -> cutVoxel(i, j, k);
-        }
-      }
-    }
-  }
-}
-#include <typeinfo>
 void Sculptor::writeOFF(const char* filename){
   Voxel *current_voxel;
   std::ofstream output_file;
@@ -148,14 +66,11 @@ void Sculptor::writeOFF(const char* filename){
   for(int i = 0; i < nx; i++){
     for(int j = 0; j < ny; j++){
       for(int k = 0; k < nz; k++){
-        // std::cout << i << " " << j << " " << k << std::endl;
-
         current_voxel = &v[i][j][k];
         if(current_voxel -> isOn) counter++;
       }
     }
   }
-
 
   int number_of_vertices = 8*counter;
   int number_of_edges = 6*counter;

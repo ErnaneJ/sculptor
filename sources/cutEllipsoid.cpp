@@ -1,7 +1,5 @@
 #include "../headers/cutEllipsoid.h"
 
-#include <iostream>
-
 CutEllipsoid::CutEllipsoid(int x_center_, int y_center_, int z_center_, int x_radius_, int y_radius_, int z_radius_){
   this -> x_center = x_center_;
   this -> y_center = y_center_;

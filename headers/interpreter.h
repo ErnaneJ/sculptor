@@ -32,7 +32,6 @@
       float b; /**< Componente azul formato de cor RGBA em um intervalo ponto flutuante de 0 à 1.*/
       float a; /**< Componente de transparência no formato de cor RGBA em um intervalo ponto flutuante de 0 à 1.*/
     public:
-    public:
       //! Construtor da classe Interpreter.
       /*!
       * Atua como construtor padrão;

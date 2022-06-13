@@ -1,7 +1,5 @@
 #include "../headers/cutSphere.h"
 
-#include <iostream>
-
 CutSphere::CutSphere(int x_center_, int y_center_, int z_center_, int radius_){
   this -> x_center = x_center_;
   this -> y_center = y_center_;
